@@ -1,0 +1,22 @@
+# Dipendenze e cartelle di sistema
+**/node_modules/
+.DS_Store
+
+# Build e Output (Vite, Nitro, Wrangler, ecc.)
+**/dist/
+**/dist-ssr/
+**/.output/
+**/.nitro/
+**/.vinxi/
+**/.wrangler/
+
+# Cache e Tooling
+**/.tanstack/
+**/__unconfig*
+
+# File di configurazione locale e segreti
+**/*.local
+**/.env
+
+# File di dati temporanei (Specifico)
+todos.json
