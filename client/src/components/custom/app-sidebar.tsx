@@ -79,21 +79,24 @@ const data: SidebarData[] = [
 
 function AppSidebar() {
     return (
-        <Sidebar>
-            <SidebarHeader>
-                <div className='center p-4 bg-primary-800 rounded-lg'>
-                    <img src={p3rLogo} alt="Persona 3 Reload" width={227} height={172}/>
+        <Sidebar variant='sidebar' collapsible='offcanvas'>
+            <SidebarHeader className='w-[120%]'>
+                <div className='center p-4 bg-primary-800 rounded-lg rounded-br-4xl'>
+                    <img
+                        className='max-h-full'
+                        src={p3rLogo}
+                        alt="Persona 3 Reload"/>
                 </div>
             </SidebarHeader>
             <SidebarContent>
-                <SidebarGroup>
-                    <SidebarMenu>
+                <SidebarGroup className='h-full'>
+                    <SidebarMenu className='flex-1 justify-between'>
                         {data.map((item: SidebarData, index: number) => (
                             <SidebarMenuItem key={index}>
                                 <SidebarMenuButton asChild className="work-sans">
                                     <Link to={item.url}>
                                         <item.icon/>
-                                        <span>{item.title}</span>
+                                        <span className='text-xl'>{item.title}</span>
                                     </Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
